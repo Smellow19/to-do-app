@@ -3,15 +3,20 @@ function onReady() {
   const newToDoText = document.getElementById('newToDoText');
   const toDoList = document.getElementById('toDoList');
 
-  addToDoForm.eventListener('submit', event => {
+  addToDoForm.addEventListener('submit', event => {
     event.preventDefault();
 
     let title = newToDoText.value;
     let newLi = document.createElement('li');
     let checkbox = document.createElement('input');
+    let button = document.createElement('button');
 
+    button.type('button');
+    button.value('trash')
     checkbox.type = 'checkbox';
-    newli.textContent = title;
+    newLi.textContent = title;
+
+
 
     newLi.appendChild(checkbox);
 
