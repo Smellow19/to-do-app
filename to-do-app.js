@@ -12,14 +12,14 @@ function onReady() {
     let button = document.createElement('button');
 
     button.type = 'button';
-    button.value ='trash';
+    button.value = 'trash';
 
     checkbox.type = 'checkbox';
     newLi.textContent = title;
 
 
-    button.appendChild(newLi);
     newLi.appendChild(checkbox);
+    newLi.appendChild(button);
     toDoList.appendChild(newLi);
 
     newToDoText.value = ''
