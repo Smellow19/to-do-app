@@ -11,6 +11,13 @@ function onReady() {
     let checkbox = document.createElement('input');
 
     checkbox.type = 'checkbox';
+    newli.textContent = title;
+
+    newLi.appendChild(checkbox);
+
+    toDoList.appendChild(newLi);
+
+    newToDoText.value = ''
   });
 }
 
