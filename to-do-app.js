@@ -9,10 +9,13 @@ function onReady() {
     let title = newToDoText.value;
     let newLi = document.createElement('li');
     let checkbox = document.createElement('input');
-    let button = document.createElement('button');
+    let button = document.createElement('input');
 
-    button.type = 'button';
-    button.value = 'trash';
+    button.type = 'button'
+    button.value = 'trash'
+    button.addEventListener('click', function(event){
+      event.target.parentElement.remove();
+    })
 
     checkbox.type = 'checkbox';
     newLi.textContent = title;
